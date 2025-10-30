@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-msxigctm
+  janus-idp.io/tekton: go-msxigctm
+  backstage.io/kubernetes-id: go-msxigctm
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-msxigctm
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
